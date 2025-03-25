@@ -24,7 +24,7 @@ appointment = st.slider(
 )
 st.write("You're scheduled for:", appointment)
 
-st.subheader("Datetime slider")
+st.subheader("When do you want to wake up?")
 
 start_time = st.slider(
     "When do you start?", value=datetime(2020, 1, 1, 9, 30), format="MM/DD/YY - hh:mm"

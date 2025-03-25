@@ -17,16 +17,11 @@ range = st.slider(
 )
 st.write("The selected range is from", range[0], "to", range[1])
 
-st.subheader("Range time slider")
-
 appointment = st.slider(
-    "Schedule your appointment:", value=(time(11, 30), time(12, 45))
+    "Schedule your appointment:",
+    min_value=datetime(2022, 1, 1, 9, 30),
+    max_value=datetime(2022, 1, 1, 12, 0),
+    value=datetime(2022, 1, 1, 10, 0),
+    format="MM/DD/YYYY HH:mm",
 )
-st.write("You're scheduled for:", appointment)
-
-st.subheader("Datetime slider")
-
-start_time = st.slider(
-    "When do you start?", value=datetime(2020, 1, 1, 9, 30), format="MM/DD/YY - hh:mm"
-)
-st.write("Start time:", start_time)
+st.write("Your appointment is scheduled for", appointment)
